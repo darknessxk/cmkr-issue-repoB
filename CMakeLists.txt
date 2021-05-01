@@ -26,6 +26,14 @@ project(vcpkg_template)
 
 include(FetchContent)
 
+message(STATUS "Fetching cmkr-issue-repoA...")
+FetchContent_Declare(
+	cmkr-issue-repoA
+	GIT_REPOSITORY
+		https://github.com/darknessxk/cmkr-issue-repoA.git
+)
+FetchContent_MakeAvailable(cmkr-issue-repoA)
+
 message(STATUS "Fetching pmm...")
 FetchContent_Declare(
 	pmm
